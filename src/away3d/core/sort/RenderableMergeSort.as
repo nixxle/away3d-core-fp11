@@ -71,7 +71,13 @@ package away3d.core.sort
 					// first sort per render order id (reduces program3D switches),
 					// then on material id (reduces setting props),
 					// then on zIndex (reduces overdraw)
-					var aid : uint = head.renderOrderId;
+
+					try{
+						var aid : uint = head.renderOrderId;
+					} catch(e:*){
+						aid = 0;
+					}
+
 					var bid : uint = headB.renderOrderId;
 
 					if (aid == bid) {
