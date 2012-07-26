@@ -137,7 +137,7 @@ package away3d.core.partition
 				//call an internal update on the entity to fire any attached logic
 				node.entity.internalUpdate();
 				
-			} while (node = t);
+			} while (node = t); //this generates a warning, is this supposed to be == maybe
 		}
 	}
 }
